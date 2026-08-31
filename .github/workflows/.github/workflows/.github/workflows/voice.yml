@@ -5,11 +5,9 @@ on:
 
 jobs:
   run-bot:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -26,6 +24,5 @@ jobs:
       - name: Run bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-
         run: |
           python bot.py
